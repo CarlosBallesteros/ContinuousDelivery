@@ -1,0 +1,72 @@
+Started by an SCM change
+Building in workspace /root/.jenkins/jobs/myFirstJob/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/CarlosBallesteros/TechnologyConversationsCD.git # timeout=10
+Fetching upstream changes from https://github.com/CarlosBallesteros/TechnologyConversationsCD.git
+ > git --version # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/CarlosBallesteros/TechnologyConversationsCD.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision d7d5e9bfcc8dc148538a9f445f61e991b3a30115 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d7d5e9bfcc8dc148538a9f445f61e991b3a30115
+First time build. Skipping changelog.
+[Gradle] - Launching build.
+[workspace] $ gradle clean check jacocoTestReport
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:clean
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:compileJava
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:processResources UP-TO-DATE
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:classes
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:checkstyleMain
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:compileTestJava
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:processTestResources UP-TO-DATE
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:testClasses
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:checkstyleTest
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:findbugsMain
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:findbugsTest
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:pmdMain
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:pmdTest
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:test
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:check
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:jacocoTestReport
+
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUz5l5Yk5+em+uWXpBabBRd0uewzZWJgqChikILqSs7PK84HKneG0CCFDBDACFJYAAAMk/XNZQAAAA==[0mBUILD SUCCESSFUL
+
+Total time: 50.032 secs
+Build step 'Invoke Gradle script' changed build result to SUCCESS
+[CHECKSTYLE] Collecting checkstyle analysis files...
+[CHECKSTYLE] Finding all files that match the pattern build/reports/checkstyle/*.xml
+[CHECKSTYLE] Parsing 2 files in /root/.jenkins/jobs/myFirstJob/workspace
+[CHECKSTYLE] Successfully parsed file /root/.jenkins/jobs/myFirstJob/workspace/build/reports/checkstyle/main.xml with 0 unique warnings and 0 duplicates.
+[CHECKSTYLE] Successfully parsed file /root/.jenkins/jobs/myFirstJob/workspace/build/reports/checkstyle/test.xml with 0 unique warnings and 0 duplicates.
+[CHECKSTYLE] Computing warning deltas based on reference build #1
+[FINDBUGS] Collecting findbugs analysis files...
+[FINDBUGS] Finding all files that match the pattern build/reports/findbugs/*.xml
+[FINDBUGS] Parsing 2 files in /root/.jenkins/jobs/myFirstJob/workspace
+[FINDBUGS] Successfully parsed file /root/.jenkins/jobs/myFirstJob/workspace/build/reports/findbugs/main.xml with 0 unique warnings and 0 duplicates.
+[FINDBUGS] Successfully parsed file /root/.jenkins/jobs/myFirstJob/workspace/build/reports/findbugs/test.xml with 0 unique warnings and 0 duplicates.
+[FINDBUGS] Computing warning deltas based on reference build #1
+[PMD] Collecting PMD analysis files...
+[PMD] Finding all files that match the pattern build/reports/pmd/*.xml
+[PMD] Parsing 2 files in /root/.jenkins/jobs/myFirstJob/workspace
+[PMD] Successfully parsed file /root/.jenkins/jobs/myFirstJob/workspace/build/reports/pmd/main.xml with 0 unique warnings and 0 duplicates.
+[PMD] Successfully parsed file /root/.jenkins/jobs/myFirstJob/workspace/build/reports/pmd/test.xml with 0 unique warnings and 0 duplicates.
+[PMD] Computing warning deltas based on reference build #1
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at BUILD level /root/.jenkins/jobs/myFirstJob/workspace/build/reports/tests to /root/.jenkins/jobs/myFirstJob/builds/2015-05-15_13-32-08/htmlreports/HTML_Report
+Recording test results
+[JaCoCo plugin] Collecting JaCoCo coverage data...
+[JaCoCo plugin] **/**.exec;**/classes;**/src/main/java; locations are configured
+[JaCoCo plugin] Number of found exec files for pattern **/**.exec: 1
+[JaCoCo plugin] Saving matched execfiles:  /root/.jenkins/jobs/myFirstJob/workspace/build/jacoco/test.exec
+[JaCoCo plugin] Saving matched class directories for class-pattern: **/classes:  /root/.jenkins/jobs/myFirstJob/workspace/build/classes /root/.jenkins/jobs/myFirstJob/workspace/build/reports/tests/classes
+[JaCoCo plugin] Saving matched source directories for source-pattern: **/src/main/java:  /root/.jenkins/jobs/myFirstJob/workspace/src/main/java
+[JaCoCo plugin] Loading inclusions files..
+[JaCoCo plugin] inclusions: []
+[JaCoCo plugin] exclusions: []
+[JaCoCo plugin] Thresholds: JacocoHealthReportThresholds [minClass=0, maxClass=0, minMethod=0, maxMethod=0, minLine=0, maxLine=0, minBranch=0, maxBranch=0, minInstruction=0, maxInstruction=0, minComplexity=0, maxComplexity=0]
+[JaCoCo plugin] Publishing the results..
+[JaCoCo plugin] Loading packages..
+[JaCoCo plugin] Done.
+Finished: SUCCESS

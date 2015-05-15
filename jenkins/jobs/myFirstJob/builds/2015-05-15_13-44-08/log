@@ -1,0 +1,65 @@
+Started by an SCM change
+Building in workspace /root/.jenkins/jobs/myFirstJob/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/CarlosBallesteros/TechnologyConversationsCD.git # timeout=10
+Fetching upstream changes from https://github.com/CarlosBallesteros/TechnologyConversationsCD.git
+ > git --version # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/CarlosBallesteros/TechnologyConversationsCD.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision fd7d69bb2fc47e779d948e1daf32a51d5c0bfced (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fd7d69bb2fc47e779d948e1daf32a51d5c0bfced
+ > git rev-list 02f0ecf82462e1081362e9f9ea0c39bedb68d8e5 # timeout=10
+[Gradle] - Launching build.
+[workspace] $ gradle clean check jacocoTestReport
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:clean
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:compileJava
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:processResources UP-TO-DATE
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:classes
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUyFJBZn++WXpC7zV766aHPULSYGhooiBimoluT8vOJ8oFpnCA1SyAABjCCFBQDX67qaYgAAAA==[0m:checkstyleMain[ant:checkstyle] /jenkins/jobs/myFirstJob/workspace/src/main/java/com/technologyconversations/articles/continuousdelivery/Game.java:7:23: '=' is not preceded with whitespace.
+[ant:checkstyle] /jenkins/jobs/myFirstJob/workspace/src/main/java/com/technologyconversations/articles/continuousdelivery/Game.java:7:24: '=' is not followed by whitespace.
+ FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':checkstyleMain'.
+> Checkstyle rule violations were found. See the report at: file:///jenkins/jobs/myFirstJob/workspace/build/reports/checkstyle/main.xml
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQT2jNKU4P0+vIKc0PTOvWC+9KDElJ1XPHUz5l5Yk5+em+uWXpBabBRd0uewzZWJgqChikILqSs7PK84HKneG0CCFDBDACFJYAAAMk/XNZQAAAA==[0mBUILD FAILED
+
+Total time: 15.851 secs
+Build step 'Invoke Gradle script' changed build result to FAILURE
+Build step 'Invoke Gradle script' marked build as failure
+[CHECKSTYLE] Skipping publisher since build result is FAILURE
+[FINDBUGS] Skipping publisher since build result is FAILURE
+[PMD] Skipping publisher since build result is FAILURE
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at BUILD level /root/.jenkins/jobs/myFirstJob/workspace/build/reports/tests to /root/.jenkins/jobs/myFirstJob/builds/2015-05-15_13-44-08/htmlreports/HTML_Report
+ERROR: Specified HTML directory '/root/.jenkins/jobs/myFirstJob/workspace/build/reports/tests' does not exist.
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mRecording test results
+ERROR: Publisher hudson.tasks.junit.JUnitResultArchiver aborted due to exception
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mhudson.AbortException: No test report files were found. Configuration error?
+	at hudson.tasks.junit.JUnitParser$ParseResultCallable.invoke(JUnitParser.java:116)
+	at hudson.tasks.junit.JUnitParser$ParseResultCallable.invoke(JUnitParser.java:92)
+	at hudson.FilePath.act(FilePath.java:981)
+	at hudson.FilePath.act(FilePath.java:959)
+	at hudson.tasks.junit.JUnitParser.parseResult(JUnitParser.java:89)
+	at hudson.tasks.junit.JUnitResultArchiver.parse(JUnitResultArchiver.java:121)
+	at hudson.tasks.junit.JUnitResultArchiver.perform(JUnitResultArchiver.java:138)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:74)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:770)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:734)
+	at hudson.model.Build$BuildExecution.post2(Build.java:183)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:683)
+	at hudson.model.Run.execute(Run.java:1784)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:89)
+	at hudson.model.Executor.run(Executor.java:240)
+Finished: FAILURE

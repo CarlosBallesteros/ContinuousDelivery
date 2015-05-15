@@ -1,0 +1,8 @@
+Started on May 15, 2015 1:40:00 PM
+Using strategy: Default
+[poll] Last Built Revision: Revision 52311e5fb21bbc6c0757f48548889b5d933d66b0 (refs/remotes/origin/master)
+ > git --version # timeout=10
+ > git -c core.askpass=true ls-remote -h https://github.com/CarlosBallesteros/TechnologyConversationsCD.git # timeout=10
+[poll] Latest remote head revision on origin/master is: 02f0ecf82462e1081362e9f9ea0c39bedb68d8e5
+Done. Took 2.7 sec
+Changes found
